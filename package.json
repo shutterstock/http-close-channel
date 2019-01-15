@@ -1,0 +1,58 @@
+{
+  "name": "http-close-channel",
+  "version": "1.0.0",
+  "description": "Express middleware for managing and closing HTTP channels",
+  "main": "index.js",
+  "nyc": {
+    "include": [
+      "index.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "all": true
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "$npm_package_config_coverageTool mocha --recursive",
+    "test:cover": "npm test --$npm_package_name:coverageTool=nyc",
+    "test:cover:check": "nyc check-coverage  --statements 100  --branches 100  --functions 100  --lines 100"
+  },
+  "homepage": "https://github.com/shutterstock/http-close-channel/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shutterstock/http-close-channel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shutterstock/http-close-channel/issues"
+  },
+  "author": "Doug Clark",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "async": "^2.6.1",
+    "chai": "^4.2.0",
+    "chai-shallow-deep-equal": "^1.4.6",
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "express": "^4.16.4",
+    "mocha": "^3.4.2",
+    "nyc": "^13.1.0",
+    "request": "^2.88.0",
+    "sinon": "^7.1.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true
+    },
+    "extends": "airbnb-base"
+  }
+}
