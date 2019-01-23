@@ -1,4 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![NPM Version](https://img.shields.io/npm/v/http-close-channel.svg)](https://npmjs.org/package/http-close-channel)
 
 # http-close-channel
 
